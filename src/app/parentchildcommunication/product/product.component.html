@@ -1,0 +1,26 @@
+<p>product works!</p>
+{{testString}}
+<h2>Product 1</h2>
+<p>
+    product id: {{product.id}} <br>
+    product title: {{product.title}} <br>
+    product desc: 
+    <input type="text" [(ngModel)]="product.description">
+    {{product.description}} <br>
+    product imagepath: 
+    <img [src]="product.imagepath" [alt]="product.description">
+    <br>
+    product quantity: {{product.quantity}} <br>
+    product comments: {{product.comments}} <br>
+</p>
+<h2>Product 2</h2>
+<p>
+    product id: {{product2.id}} <br>
+    product title: {{product2.title}} <br>
+    product desc: {{product2.description}} <br>
+    product imagepath: 
+    <img [src]="product2.imagepath" [alt]="product2.description">
+    <br>
+    product quantity: {{product.quantity}} <br>
+    product comments: {{product.comments}} <br>
+</p>

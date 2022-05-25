@@ -6,6 +6,7 @@ import { ProductComponent } from './parentchildcommunication/product/product.com
 import { ProductcreateComponent } from './parentchildcommunication/productcreate/productcreate.component';
 import { ProductlistComponent } from './parentchildcommunication/productlist/productlist.component';
 import { ProductlistitemComponent } from './parentchildcommunication/productlistitem/productlistitem.component';
+import { HeroesComponent } from './heroapp/heroes/heroes.component';
 
 @NgModule({
   declarations: [
@@ -13,7 +14,8 @@ import { ProductlistitemComponent } from './parentchildcommunication/productlist
     ProductComponent,
     ProductcreateComponent,
     ProductlistComponent,
-    ProductlistitemComponent
+    ProductlistitemComponent,
+    HeroesComponent
   ],
   imports: [
     BrowserModule, FormsModule

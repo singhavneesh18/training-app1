@@ -1,0 +1,8 @@
+<h4>User event history!</h4>
+<ul>
+    <li *ngFor="let message of messagesLog">
+        User {{message.action | lowercase}} hero id: {{message.hero.id}} having name:  {{message.hero.name}}
+    </li>
+</ul>
+
+<button class="btn btn-success" (click)="cleanMessage()">Clear the event logs</button>

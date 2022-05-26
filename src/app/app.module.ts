@@ -7,6 +7,10 @@ import { ProductcreateComponent } from './parentchildcommunication/productcreate
 import { ProductlistComponent } from './parentchildcommunication/productlist/productlist.component';
 import { ProductlistitemComponent } from './parentchildcommunication/productlistitem/productlistitem.component';
 import { HeroesComponent } from './heroapp/heroes/heroes.component';
+import { HeroDetailComponent } from './heroapp2/hero-detail/hero-detail.component';
+import { HeroListComponent } from './heroapp2/hero-list/hero-list.component';
+import { MessagesComponent } from './heroapp2/messages/messages.component';
+import { HeroDashboardComponent } from './heroapp2/hero-dashboard/hero-dashboard.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +19,11 @@ import { HeroesComponent } from './heroapp/heroes/heroes.component';
     ProductcreateComponent,
     ProductlistComponent,
     ProductlistitemComponent,
-    HeroesComponent
+    HeroesComponent,
+    HeroDetailComponent,
+    HeroListComponent,
+    MessagesComponent,
+    HeroDashboardComponent
   ],
   imports: [
     BrowserModule, FormsModule

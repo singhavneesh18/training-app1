@@ -1,0 +1,20 @@
+<h2>Selected Hero Details</h2>
+<div *ngIf="selectedHero; else noHeroSelected">
+    <label for="hero-id">
+        My Hero Id:
+    </label>
+    <span>{{displayHero.id}}</span>
+    <br>
+    <label for="hero-name">
+        My Hero Name:
+    </label>
+    <span>
+        <input type="text" name="name" [(ngModel)]="displayHero.name">
+    </span>
+    <br>
+    <button (click)="updateSelectedHero(displayHero)">Update</button>
+</div>
+<ng-template #noHeroSelected>
+    No hero selected
+</ng-template>
+

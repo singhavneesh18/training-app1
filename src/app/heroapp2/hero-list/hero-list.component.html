@@ -1,9 +1,19 @@
 <h2>My Heroes</h2>
-<ul class="heroes">
-    <li *ngFor="let hero of heroes">
-      <button type="button" (click)="heroClicked(hero)">
-        <span class="badge">{{hero.id}}</span>
-        <span class="name">{{hero.name}}</span>
-      </button>
+<ul class="list-group" *ngIf="heroes && heroes.length > 0; else noHeroes">
+    <li *ngFor="let hero of heroes" class="list-group-item" >
+      <div class="col-sm-9" >
+        <span role="button" tabindex="0" (click)="heroClicked(hero)" >{{hero.id}}        </span>
+        <span role="button" tabindex="0" (click)="heroClicked(hero)" >{{hero.name}}</span>
+      </div>
+      <div class="col-sm-*">
+        <button class="btn btn-danger" (click)="deleteHero(hero)">Delete</button>
+      </div>
+      
     </li>
 </ul>
+
+<ng-template #noHeroes>
+  <div class="bg-info">
+    No heroes are available, please add some
+  </div>
+</ng-template>

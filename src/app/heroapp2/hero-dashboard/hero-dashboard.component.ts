@@ -28,8 +28,21 @@ export class HeroDashboardComponent implements OnInit {
     this.messagesLog.push(new Message(ActionTypes.UPDATE, hero));
   }
 
+  heroAdded(hero: Hero) {
+    this.messagesLog.push(new Message(ActionTypes.ADD, new Hero(hero.id, hero.name)));
+  }
+
   cleanMessageHistory() {
+    this.selectedHero = <Hero>{};
     this.messagesLog = [];
+  }
+
+  deleteHero(hero: Hero) {
+    const indexOfHero = this.heroes.indexOf(hero);
+    if (indexOfHero > -1) {
+      this.heroes.splice(indexOfHero, 1);
+      this.messagesLog.push(new Message(ActionTypes.DELETE, new Hero(hero.id, hero.name)));
+    }
   }
 
 }

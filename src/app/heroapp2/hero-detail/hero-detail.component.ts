@@ -30,7 +30,7 @@ export class HeroDetailComponent implements OnInit {
 
   updateSelectedHero(hero: Hero) {
     this._selectedHero.name = hero.name;
-    this.heroUpdated.emit(hero);
+    this.heroUpdated.emit(new Hero(hero.id, hero.name));
   }
 
 }

@@ -18,3 +18,8 @@ export const MockHeroes : Hero[] = [
     new Hero(31, 'Jack'),
     new Hero(191, 'Juliaan')
 ];
+
+
+export enum DisplayMessageType {
+    SUCCESS = 'bg-success', WARNING = 'bg-warning', ERROR= 'bg-danger', INFO = 'bg-info'
+}

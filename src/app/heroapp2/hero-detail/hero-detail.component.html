@@ -1,5 +1,5 @@
 <h2>Selected Hero Details</h2>
-<div *ngIf="selectedHero; else noHeroSelected">
+<div *ngIf="selectedHero && selectedHero.id && selectedHero.name; else noHeroSelected">
     <label for="hero-id">
         My Hero Id:
     </label>

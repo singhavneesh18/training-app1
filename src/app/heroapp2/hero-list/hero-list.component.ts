@@ -12,6 +12,8 @@ export class HeroListComponent implements OnInit {
 
   @Output('heroClicked') heroClickEvent: EventEmitter<Hero>  = new EventEmitter();
 
+  @Output('deleteHero') deleteHeroEvent: EventEmitter<Hero> = new EventEmitter();
+
   constructor() { }
 
   ngOnInit(): void {
@@ -20,6 +22,10 @@ export class HeroListComponent implements OnInit {
 
   heroClicked(hero: Hero) {
     this.heroClickEvent.emit(hero);
+  }
+
+  deleteHero(hero: Hero){
+    this.deleteHeroEvent.emit(hero);
   }
 
 }

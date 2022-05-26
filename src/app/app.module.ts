@@ -11,6 +11,7 @@ import { HeroDetailComponent } from './heroapp2/hero-detail/hero-detail.componen
 import { HeroListComponent } from './heroapp2/hero-list/hero-list.component';
 import { MessagesComponent } from './heroapp2/messages/messages.component';
 import { HeroDashboardComponent } from './heroapp2/hero-dashboard/hero-dashboard.component';
+import { CreateHeroComponent } from './heroapp2/create-hero/create-hero.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { HeroDashboardComponent } from './heroapp2/hero-dashboard/hero-dashboard
     HeroDetailComponent,
     HeroListComponent,
     MessagesComponent,
-    HeroDashboardComponent
+    HeroDashboardComponent,
+    CreateHeroComponent
   ],
   imports: [
     BrowserModule, FormsModule

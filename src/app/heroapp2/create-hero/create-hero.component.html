@@ -1,0 +1,19 @@
+
+<p *ngIf="displayMessage" [class]="messageType">
+    {{displayMessage}}
+</p>
+<form>
+    <div class="form-group">
+        <label for="hero-id"> My Hero Id:        </label>
+        <input type="number" name="id" placeholder="Enter your Id" #id class="form-control">
+        <br>
+        <label for="hero-name">
+            My Hero Name:
+        </label>
+            <input type="text" name="name" placeholder="Enter your name" #name class="form-control">
+        
+        <br>
+        <button (click)="addHero()" class="btn btn-success">Add New Hero</button>
+    </div>
+</form>
+

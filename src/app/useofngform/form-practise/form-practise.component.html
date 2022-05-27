@@ -1,0 +1,23 @@
+<div class="container-fluid">
+    <h2>Form Practise</h2>
+    <hr>
+    <form #testForm="ngForm" (ngSubmit)="saveData(testForm)" >
+        <div class="mb-3">
+          <label for="exampleInputEmail1" class="form-label">Email address   </label><label for="exampleInputEmail1" *ngIf="email.touched && email.invalid" class="bg-danger">  Required</label>
+          <input type="email" class="form-control is-invalid" id="exampleInputEmail1" aria-describedby="emailHelp" name= "email" ngModel required #email="ngModel">
+          <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+          
+        </div>
+        <div class="mb-3">
+          <label for="exampleInputPassword1" class="form-label">Password</label> <label for="id" *ngIf="pwd.touched && pwd.invalid" class="bg-danger">Required</label>
+          <input type="password" class="form-control" id="exampleInputPassword1" name="pwd" ngModel required  #pwd="ngModel">
+        </div>
+        <div class="mb-3 form-check">
+          <input type="checkbox" class="form-check-input" id="exampleCheck1" name="exampleCheck1" ngModel required #exampleCheck1="ngModel"> 
+          <label class="form-check-label" for="exampleCheck1">Check me out, example Read t&c</label><label for="exampleCheck1" *ngIf="exampleCheck1.touched && exampleCheck1.invalid">*</label>
+        </div>
+        <button type="submit" class="btn btn-primary" [disabled]="!testForm.form.valid">Submit</button>
+
+      
+      </form>
+</div>

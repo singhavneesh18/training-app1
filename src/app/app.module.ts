@@ -12,6 +12,7 @@ import { HeroListComponent } from './heroapp2/hero-list/hero-list.component';
 import { MessagesComponent } from './heroapp2/messages/messages.component';
 import { HeroDashboardComponent } from './heroapp2/hero-dashboard/hero-dashboard.component';
 import { CreateHeroComponent } from './heroapp2/create-hero/create-hero.component';
+import { FormPractiseComponent } from './useofngform/form-practise/form-practise.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { CreateHeroComponent } from './heroapp2/create-hero/create-hero.componen
     HeroListComponent,
     MessagesComponent,
     HeroDashboardComponent,
-    CreateHeroComponent
+    CreateHeroComponent,
+    FormPractiseComponent
   ],
   imports: [
     BrowserModule, FormsModule

@@ -11,11 +11,13 @@ export class HeroDetailComponent implements OnInit {
   private _selectedHero: Hero;
 
   @Input('hero') set selectedHero(value: Hero) {
-    this._selectedHero = value;
-    this.displayHero = new Hero(value.id, value.name);
+    if (value) {
+      this._selectedHero = value;
+      this.displayHero = new Hero(value.id, value.name);
+    }
   }
 
-  get selectedHero(): Hero{
+  get selectedHero(): Hero {
     return this._selectedHero;
   }
 

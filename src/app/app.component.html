@@ -1,5 +1,10 @@
-<!-- <app-product>UI Loaded successfully</app-product> -->
-<!-- <app-heroes></app-heroes> -->
-<!-- <app-hero-dashboard></app-hero-dashboard> -->
-<!-- <app-form-practise></app-form-practise> -->
-<app-show-users></app-show-users>
+<ul class="nav nav-tabs">
+    <li *ngFor="let templates of displayTemplates; let i=index" role="presentation"
+        [ngClass]="getClassForActiveNavbar(i)">
+        <a [routerLink]="templates.route" (click)="show(i)" [routerLinkActive]="isActive(i)">
+            {{templates.templateNameToDisplay}}
+        </a>
+    </li>
+</ul>
+
+<router-outlet></router-outlet>

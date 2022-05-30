@@ -16,6 +16,9 @@ import { FormPractiseComponent } from './useofngform/form-practise/form-practise
 import { ShowUsersComponent } from './assignments/number5/show-users/show-users.component';
 import { ActiveUsersComponent } from './assignments/number5/active-users/active-users.component';
 import { InactiveUsersComponent } from './assignments/number5/inactive-users/inactive-users.component';
+import { RouterModule } from '@angular/router';
+import { AppRoutingModule } from 'src/config/routes.config';
+import { NotFoundComponent } from './not-found/not-found.component';
 
 @NgModule({
   declarations: [
@@ -33,10 +36,11 @@ import { InactiveUsersComponent } from './assignments/number5/inactive-users/ina
     FormPractiseComponent,
     ShowUsersComponent,
     ActiveUsersComponent,
-    InactiveUsersComponent
+    InactiveUsersComponent,
+    NotFoundComponent
   ],
   imports: [
-    BrowserModule, FormsModule
+    BrowserModule, FormsModule, RouterModule.forRoot(AppRoutingModule)
   ],
   providers: [],
   bootstrap: [AppComponent]
